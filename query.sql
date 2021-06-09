@@ -1,11 +1,9 @@
 -- 1.Seleziona tutti gli ospiti che sono stati identificati con la carta diidentità
-
 SELECT * FROM `ospiti` 
 WHERE `document_type` = "CI";
 
 
 -- 2.Seleziona tutti gli ospiti che sono nati dopo il 1988
-
 SELECT * FROM `ospiti` 
 WHERE `date_of_birth` >= 1988;
 
@@ -17,12 +15,15 @@ WHERE `date_of_birth` >= 1988;
 SELECT * FROM `ospiti` 
 WHERE name LIKE "D%";
 
+
 -- 5.Calcola il totale incassato degli ordini accepted
 SELECT * FROM `pagamenti` 
 WHERE status ="accepted";
 
 
 -- 6.Qualè il prezz omassimo pagato?
+SELECT MAX(price) 
+FROM `pagamenti`;
 
 
 -- 7.Seleziona gli ospiti riconosciuti con patente e nati nel 1975
